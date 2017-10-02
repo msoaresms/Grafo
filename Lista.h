@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "No.h"
+#include "Item.h"
 using namespace std;
 
 template <class T>
@@ -42,6 +43,7 @@ public:
     void insere(T);
     void remove(int, T *);
     No<T> *busca(int);
+    void mostrar();
 };
 
 template <typename T>
@@ -75,6 +77,17 @@ No<T> *Lista<T>::busca(int pChave) {
         aux = aux->getProx();
     }
     return aux;
+}
+
+template <class T>
+void Lista<T>::mostrar() {
+    No<T> *aux = this->prim->getProx();
+    while(aux != NULL){
+        Item x = aux->getItem();
+        x.mostrar();
+        aux = aux->getProx();
+    }
+    cout << endl;
 }
 
 #endif //GRAFO_LISTA_H
