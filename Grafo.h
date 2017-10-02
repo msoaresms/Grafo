@@ -3,13 +3,14 @@
 
 #include <iostream>
 #include "Lista.h"
+#include "Item.h"
 using namespace std;
 
 typedef int Vertex;
 
 class Grafo {
 private:
-    Lista<Vertex> *adj;
+    Lista<Item> *adj;
     int n, m;
     void destroi();
 
@@ -22,10 +23,10 @@ public:
     void inserirAresta(Vertex, Vertex);
     void mostrar();
 
-    Lista<Vertex> *getAdj() const {
+    Lista<Item> *getAdj() const {
         return adj;
     }
-    void setAdj(Lista<Vertex> *adj) {
+    void setAdj(Lista<Item> *adj) {
         Grafo::adj = adj;
     }
     int getN() const {
