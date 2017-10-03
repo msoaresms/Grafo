@@ -2,6 +2,8 @@
 #include "Grafo.h"
 using namespace std;
 
+
+//#ifdef COMPILA
 int main() {
     Grafo g(5);
 
@@ -17,3 +19,21 @@ int main() {
 
     return 0;
 }
+//#endif
+
+#ifdef COMPILA
+int main(){
+    Item a(1);
+    Item b(2);
+    Item c(3);
+
+    Lista<Item> teste;
+
+    teste.insere(a);
+    teste.insere(b);
+    teste.insere(c);
+
+    teste.mostrar();
+
+}   
+#endif
