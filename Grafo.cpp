@@ -2,6 +2,7 @@
 
 void Grafo::inicializar(int n) {
     this->n = n;
+    this->m = 0;
     adj = new Lista<Item>[n+1];
 }
 
@@ -15,9 +16,11 @@ void Grafo::inserirAresta(Vertex u, Vertex v) {
 
 void Grafo::mostrar() {
     for (int i = 1; i <= n; i++){
+
         cout << "v[" << i << "] = ";
         adj[i].mostrar();
     }
+
 }
 
 void Grafo::destroi() {
