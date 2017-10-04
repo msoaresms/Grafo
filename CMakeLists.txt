@@ -3,5 +3,5 @@ project(Grafo)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp No.h Lista.h Grafo.cpp Grafo.h Item.cpp Item.h)
+set(SOURCE_FILES main.cpp Grafo.cpp Grafo.h)
 add_executable(Grafo ${SOURCE_FILES})
