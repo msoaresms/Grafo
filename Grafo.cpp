@@ -16,7 +16,6 @@ void Grafo::inserirAresta(Vertex u, Vertex v) {
 
 void Grafo::mostrar() {
     for (int i = 1; i <= n; i++){
-
         cout << "v[" << i << "] = ";
         adj[i].mostrar();
     }
