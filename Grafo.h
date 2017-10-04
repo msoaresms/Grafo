@@ -2,15 +2,14 @@
 #define GRAFO_GRAFO_H
 
 #include <iostream>
-#include "Lista.h"
-#include "Item.h"
+#include <vector>
 using namespace std;
 
 typedef int Vertex;
 
 class Grafo {
 private:
-    Lista<Item> *adj;
+    vector<int> *adj;
     int n, m;
     void destroi();
 
@@ -22,25 +21,6 @@ public:
     void inicializar(int);
     void inserirAresta(Vertex, Vertex);
     void mostrar();
-
-    Lista<Item> *getAdj() const {
-        return adj;
-    }
-    void setAdj(Lista<Item> *adj) {
-        Grafo::adj = adj;
-    }
-    int getN() const {
-        return n;
-    }
-    void setN(int n) {
-        Grafo::n = n;
-    }
-    int getM() const {
-        return m;
-    }
-    void setM(int m) {
-        Grafo::m = m;
-    }
 };
 
 
