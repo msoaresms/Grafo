@@ -3,23 +3,25 @@
 void Grafo::inicializar(int n) {
     this->n = n;
     this->m = 0;
-    adj = new Lista<Item>[n+1];
+    adj = new vector<int>[n+1];
 }
 
 void Grafo::inserirAresta(Vertex u, Vertex v) {
-    Item x1(u);
-    adj[u].insere(x1);
-    Item x2(v);
-    adj[v].insere(x2);
+    adj[u].push_back(u);
+    adj[v].push_back(v);
     m++;
 }
 
 void Grafo::mostrar() {
     for (int i = 1; i <= n; i++){
         cout << "v[" << i << "] = ";
-        adj[i].mostrar();
+        vector<int> aux = adj[i];
+        for (int i = 1; i < aux.size() - 1; i++) {
+            cout << aux[i] << ", ";
+        }
+        cout << endl;
+        //adj[i].mostrar();
     }
-
 }
 
 void Grafo::destroi() {
