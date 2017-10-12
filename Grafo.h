@@ -9,18 +9,36 @@ typedef int Vertex;
 
 class Grafo {
 private:
-    vector<int> *adj;
+    vector<Vertex> *adj;
     int n, m;
     void destroi();
 
 public:
-    Grafo(int n){
-        inicializar(n);
-    }
+    Grafo(int);
 
     void inicializar(int);
     void inserirAresta(Vertex, Vertex);
     void mostrar();
+
+    vector<Vertex> *getAdj() const {
+        return adj;
+    }
+
+    void setAdj(vector<Vertex> *adj) {
+        Grafo::adj = adj;
+    }
+    int getN() const {
+        return n;
+    }
+    void setN(int n) {
+        Grafo::n = n;
+    }
+    int getM() const {
+        return m;
+    }
+    void setM(int m) {
+        Grafo::m = m;
+    }
 };
 
 

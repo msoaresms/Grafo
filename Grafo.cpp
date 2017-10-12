@@ -1,6 +1,11 @@
 #include "Grafo.h"
 
+Grafo::Grafo(int n){
+    inicializar(n);
+}
+
 void Grafo::inicializar(int n) {
+    if (this->n != 0) destroi();
     this->n = n;
     this->m = 0;
     adj = new vector<int>[n+1];
@@ -20,7 +25,6 @@ void Grafo::mostrar() {
             cout << aux[j] << ", ";
         }
         cout << endl;
-        //adj[i].mostrar();
     }
 }
 
